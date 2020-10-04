@@ -40,4 +40,40 @@ int main()
  
         printf("\n");
     }
+  // Prints lower triangular part of the pattern
+    for(i=n; i>=1; i--)
+    {
+        for(j=i; j<n; j++)
+        {
+            printf(" ");
+        }
+        
+        // Print the name
+        if(i == n) 
+        {
+            for(j=1; j<=(n * 2-len)/2; j++)
+            {
+                printf("*");
+            }   
+
+            printf("%s", name);
+
+            for(j=1; j<(n*2-len)/2; j++)
+            {
+                printf("*");
+            }
+        }
+        else 
+        {
+            for(j=1; j<=(i*2)-1; j++)
+            {
+                printf("*");
+            }
+        }
  
+        printf("\n");
+    }
+ 
+    return 0;
+}
+
